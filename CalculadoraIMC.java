@@ -16,7 +16,6 @@ public class CalculadoraIMC {
         switch (genero) {
             case 'M':
             case 'm':
-
                 if (imc >= 40) {
                     classificacao = "Obesidade Mórbida";
                 } else if (imc >= 30) {
@@ -33,8 +32,7 @@ public class CalculadoraIMC {
             case 'F':
             case 'f':
             case 'N':
-            case 'n': 
-
+            case 'n':
                 if (imc >= 39) {
                     classificacao = "Obesidade Mórbida";
                 } else if (imc >= 29) {
@@ -53,13 +51,14 @@ public class CalculadoraIMC {
                 break;
         }
 
-        System.out.println("\nNome: " + nome);
-        System.out.println("Gênero: " + genero);
+        IO.println("\nNome: " + nome);
+        IO.println("Gênero: " + genero);
         
-        System.out.println("IMC: " + (int)(imc * 10) / 10.0); 
+        double imcFormatado = (int)(imc * 10) / 10.0;
+        IO.println("IMC: " + imcFormatado);
         
-        System.out.println("Classificação: " + classificacao);
+        IO.println("Classificação: " + classificacao);
         
-        System.out.println("\nAtitus Educação - O lado certo da força!!!");
+        IO.println("\nAtitus Educação - O lado certo da força!!!");
     }
 }
